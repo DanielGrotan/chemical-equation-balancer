@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Chemical Equation Balancer</title>
+  </head>
+  <body>
+    <div class="chemical-equation">
+      <div class="chemical-equation-input">
+        <label for="reactants">Reactants:</label>
+        <input type="text" id="reactants" />
+        <span id="reactants-error" class="error"></span>
+      </div>
+      <span class="chemical-equation-arrow">→</span>
+      <div class="chemical-equation-input">
+        <label for="products">Products:</label>
+        <input type="text" id="products" />
+        <span id="products-error" class="error"></span>
+      </div>
+      <button
+        type="button"
+        class="balance-equation-button"
+        onclick="balanceEquation()"
+      >
+        Balance
+      </button>
+    </div>
+    <span id="output"></span>
+    <script src="index.js"></script>
+  </body>
+</html>
