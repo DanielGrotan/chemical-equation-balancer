@@ -180,6 +180,8 @@ const calculateCoefficients = (reactantsExpression, productsExpression) => {
             if all(coefficient.is_integer and coefficient >= 1 for coefficient in new_coefficients):
                 result = new_coefficients
                 break
+        
+        result = [0]
                 
     `);
   return pyodide.globals
